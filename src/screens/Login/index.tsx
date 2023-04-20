@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, KeyboardAvoidingView, TextInput} from "react-native";
 import { styles } from "./styles";
-import { MaterialIcons } from '@expo/vector-icons';
+import { MaterialIcons, FontAwesome5, AntDesign } from '@expo/vector-icons';
 import { colors } from "../../styles/colors";
 import { ButtonInterface } from "../../components/ButtonInterface";
 import {LoginTypes} from "../../navigations/login.navigations"
@@ -13,7 +13,7 @@ export function Login({navigation}:LoginTypes){
             <KeyboardAvoidingView>
                 <Text style={styles.title}>Login</Text>
                 <View style={styles.formRow}>
-                    <MaterialIcons name="email" size={24} color="gold" />
+                    <MaterialIcons name="email" style={styles.icon} />
                     <TextInput
                         placeholder="E-mail"
                         placeholderTextColor={colors.thirdLight}
@@ -23,7 +23,7 @@ export function Login({navigation}:LoginTypes){
                     />
                 </View>
                 <View style={styles.formRow}>
-                    <MaterialIcons name="vpn-key" size={24} color="gold" />
+                    <FontAwesome5 name="key" style={styles.icon} />
                     <TextInput
                         placeholder="Senha"
                         placeholderTextColor={colors.thirdLight}
@@ -32,7 +32,8 @@ export function Login({navigation}:LoginTypes){
                         style={styles.input}
                     />
                 </View>
-                <ComponentButtonInterface title="cadastre-se" type="primary" onPressI={() => { navigation.navigate('Cadastrar') }} />
+                <ComponentButtonInterface title='Entrar' type='primary' onPressI={()=>{console.log('Entrar')}} />
+                <ComponentButtonInterface title="Cadastre-se" type="secondary" onPressI={() => { navigation.navigate('Cadastrar') }} />
             </KeyboardAvoidingView>   
         </View>
     )

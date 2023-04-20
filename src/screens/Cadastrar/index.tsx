@@ -15,7 +15,7 @@ export function Cadastrar({ navigation }: LoginTypes) {
             <KeyboardAvoidingView>
                 <Text style={styles.title}>Cadastre-se</Text>
                 <View style={styles.formRow}>
-                    <AntDesign name="user" style={styles.icon} />
+                    <FontAwesome5 name="user-alt" style={styles.icon} />
                     <TextInput
                         placeholder="Nome"
                         placeholderTextColor={colors.thirdLight}
@@ -26,7 +26,7 @@ export function Cadastrar({ navigation }: LoginTypes) {
                 <View style={styles.formRow}>
                     <MaterialIcons name="email" style={styles.icon} />
                     <TextInput
-                        placeholder="Email"
+                        placeholder="E-mail"
                         placeholderTextColor={colors.thirdLight}
                         keyboardType="email-address"
                         autoCapitalize="none"
@@ -43,7 +43,7 @@ export function Cadastrar({ navigation }: LoginTypes) {
                         style={styles.input}
                     />
                 </View>
-                <ComponentButtonInterface title="Entrar" type="primary" onPressI={() => { console.log('Salvar') }} />
+                <ComponentButtonInterface title="Salvar" type="secondary" onPressI={() => { console.log('Salvar') }} />
                 <ComponentButtonInterface title="Voltar" type="primary" onPressI={() =>  navigation.navigate('Login') } />
             </KeyboardAvoidingView>
         </View>
