@@ -6,6 +6,7 @@ import { colors } from "../../styles/colors";
 import { ButtonInterface } from "../../components/ButtonInterface";
 import {LoginTypes} from "../../navigations/login.navigations"
 import { ComponentButtonInterface } from "../../components";
+import { Navigation } from "../../navigations";
 
 export function Login({navigation}:LoginTypes){
     return(
@@ -32,7 +33,7 @@ export function Login({navigation}:LoginTypes){
                         style={styles.input}
                     />
                 </View>
-                <ComponentButtonInterface title='Entrar' type='primary' onPressI={()=>{console.log('Entrar')}} />
+                <ComponentButtonInterface title='Entrar' type='primary' onPressI={()=>{navigation.navigate{'Tab'}}} />
                 <ComponentButtonInterface title="Cadastre-se" type="secondary" onPressI={() => { navigation.navigate('Cadastrar') }} />
             </KeyboardAvoidingView>   
         </View>
