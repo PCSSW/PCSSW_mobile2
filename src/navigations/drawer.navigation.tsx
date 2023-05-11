@@ -1,24 +1,21 @@
-import React from "react";
-import {DrawerNavigationProp, createDrawerNavigator} from "@react-navigation/drawer";
-import { ScreenPerfil } from "../screens";
-import { colors } from "../styles/colors";
-import { Ionicons } from "@expo/vector-icons";
+import React from 'react';
+import { DrawerNavigationProp, createDrawerNavigator } from '@react-navigation/drawer';
+import { ScreenPerfil } from "../screens"
+import { colors } from '../styles/colors';
+import { Ionicons } from '@expo/vector-icons';
 type DrawerParamList = {
   Perfil: undefined;
-};
-type DrawerScreenNavigationProp = DrawerNavigationProp<DrawerParamList, "Perfil">;
+}
+type DrawerScreenNavigation = DrawerNavigationProp <DrawerParamList, "Perfil">
 export type DrawerTypes = {
-  navigation: DrawerScreenNavigationProp;
-};
+  navigation: DrawerScreenNavigation
+}
+
 export function DrawerNavigation() {
-  const Drawer = createDrawerNavigator<DrawerParamList>();
+  const Drawer = createDrawerNavigator();
   return (
     <Drawer.Navigator>
-      
-      <Drawer.Screen
-        name="Perfil"
-        component={ScreenPerfil}
-    />
+      <Drawer.Screen name="Perfil" component={ScreenPerfil} />
     </Drawer.Navigator>
-  );
+  )
 }

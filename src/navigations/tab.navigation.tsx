@@ -1,40 +1,36 @@
-import React from "react";
-import {
-  BottomTabNavigationProp,
-  createBottomTabNavigator,
-} from "@react-navigation/bottom-tabs";
-import { ScreenPerfil } from "../screens";
-import { colors } from "../styles/colors";
-import { Ionicons } from "@expo/vector-icons";
+import React from 'react';
+import { BottomTabNavigationProp, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { ScreenPerfil } from "../screens"
+import { colors } from '../styles/colors';
+import { Ionicons } from '@expo/vector-icons';
 type TabParamList = {
   Perfil: undefined;
-};
-type TabScreenNavigationProp = BottomTabNavigationProp<TabParamList, "Perfil">;
+}
+type TabScreenNavigation = BottomTabNavigationProp <TabParamList, "Perfil">
 export type TabTypes = {
-  navigation: TabScreenNavigationProp;
-};
+  navigation: TabScreenNavigation
+}
+
 export function TabNavigation() {
-  const Tab = createBottomTabNavigator<TabParamList>();
+  const Tab = createBottomTabNavigator();
   return (
     <Tab.Navigator
       screenOptions={{
-        headerStyle: {
-          backgroundColor: colors.primary,
-        },
-        headerTintColor: colors.white,
-        tabBarActiveBackgroundColor: colors.primary,
+        tabBarActiveBackgroundColor: colors.secondary,
         tabBarActiveTintColor: colors.white,
+        headerStyle: {
+          backgroundColor: colors.secondary
+        },
+        headerTintColor: colors.white
       }}
     >
-      <Tab.Screen
-        name="Perfil"
-        component={ScreenPerfil}
+      <Tab.Screen name="Perfil" component={ScreenPerfil} 
         options={{
           tabBarIcon: () => (
-            <Ionicons name="person" color={colors.white} size={24} />
+            <Ionicons name = 'person' color={colors.white} size={24} />
           ),
         }}
       />
     </Tab.Navigator>
-  );
+  )
 }
