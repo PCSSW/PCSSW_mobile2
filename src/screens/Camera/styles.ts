@@ -6,6 +6,8 @@ export const styles = StyleSheet.create({
     },
     camera: {
       flex: 1,
+      justifyContent: "flex-end",
+      alignItems: "center"
     },
     buttonContainer: {
       flex: 1,
