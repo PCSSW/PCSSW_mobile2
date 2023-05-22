@@ -1,16 +1,13 @@
 import React from 'react';
-import { 
-    View, KeyboardAvoidingView, Text,
-    TextInput
-} from "react-native";
-import {styles} from "./styles";
+import { View, KeyboardAvoidingView, Text, TextInput } from "react-native";
+import { styles } from "./styles";
 import { MaterialIcons, FontAwesome5, AntDesign } from '@expo/vector-icons';
 import { colors } from '../../styles/colors';
-import {ComponentButtonInterface} from '../../components';
+import { ComponentButtonInterface } from '../../components';
 import { LoginTypes } from '../../navigations/login.navigations';
 
 export function Cadastrar({ navigation }: LoginTypes) {
-    return(
+    return (
         <View style={styles.container}>
             <KeyboardAvoidingView>
                 <Text style={styles.title}>Cadastre-se</Text>
@@ -44,7 +41,7 @@ export function Cadastrar({ navigation }: LoginTypes) {
                     />
                 </View>
                 <ComponentButtonInterface title="Salvar" type="secondary" onPressI={() => { navigation.navigate('Drawer') }} />
-                <ComponentButtonInterface title="Voltar" type="primary" onPressI={() =>  navigation.navigate('Login') } />
+                <ComponentButtonInterface title="Voltar" type="primary" onPressI={() => navigation.navigate('Login')} />
             </KeyboardAvoidingView>
         </View>
     )

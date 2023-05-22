@@ -33,7 +33,7 @@ export function Login({navigation}: LoginTypes) {
                     style={styles.input}
                 />
             </View>
-            <ComponentButtonInterface title='Cadastrar' type='secondary' onPressI={()=> navigation.navigate ('Cadastrar')} />
+            <ComponentButtonInterface title='Cadastrar' type='primary' onPressI={()=> navigation.navigate ('Cadastrar')} />
             <ComponentButtonInterface title='Entrar' type='secondary' onPressI={()=> navigation.navigate ('Tab')} />
             </KeyboardAvoidingView>
             
