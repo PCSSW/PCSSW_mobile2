@@ -29,5 +29,10 @@ export const styles = StyleSheet.create({
       width: Dimensions.get('window').width * 0.7,
       height: Dimensions.get('window').width * 0.7, 
 
+    },
+    sorriso: {
+      flex: 1,
+      alignItems: 'flex-end',
+      justifyContent: 'flex-end'
     }
   });

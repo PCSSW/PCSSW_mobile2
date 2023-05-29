@@ -19,14 +19,14 @@ export function DrawerNavigation() {
       <Drawer.Screen name="Perfil" component={ScreenPerfil}
         options={{
           drawerIcon: () => (
-            <Ionicons name='person' size={24} color={colors.white} />
+            <Ionicons name='person' size={24} color={colors.fourth} />
           )
         }}
       />
       <Drawer.Screen name="Camera" component={ScreenCamera}
         options={{
           drawerIcon: () => (
-            <AntDesign name='camera' size={24} color={colors.white} />
+            <AntDesign name='camera' size={24} color={colors.fourth} />
           )
         }}
       />
