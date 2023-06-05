@@ -5,4 +5,5 @@ export { Slider4 as ScreenSlider4 } from "./Slider4";
 export { Login as ScreenLogin} from "./Login";
 export { Cadastrar as ScreenCadastrar } from "./Cadastrar";
 export {Perfil as ScreenPerfil} from "./Perfil";
-export {CameraScreen as ScreenCamera} from "./Camera";
+export { CameraScreen as ScreenCamera } from "./Camera";
+export { LocationScreen as ScreenLocation } from "./Location";
