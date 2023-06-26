@@ -23,7 +23,7 @@ export default function App() {
       return <ScreenSlider4 setPageI={setPage} />
       break;
     default:
-      return <Navigation />
+      return <Navigation/>
       break;
     
   }

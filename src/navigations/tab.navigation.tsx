@@ -41,12 +41,12 @@ export function TabNavigation() {
         ),
       }}
       />
-      <Tab.Screen name = 'Location' component={ScreenLocation}
-      options={{
-        tabBarIcon: () => (
-          <FontAwesome name='map-marker' color={colors.white} size={24} />
-        ),
-      }}
+      <Tab.Screen name='Location' component={ScreenLocation} 
+        options={{
+          tabBarIcon: () => (
+          <FontAwesome name="map-marker" size={24} color="black" />
+          )
+        }}
       />
     </Tab.Navigator>
   )
