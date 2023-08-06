@@ -29,7 +29,7 @@ export function TabNavigation() {
       <Tab.Screen name="Perfil" component={ScreenPerfil} 
         options={{
           tabBarIcon: () => (
-            <Ionicons name = 'person' color={colors.white} size={24} />
+            <Ionicons name = 'person' color={colors.black} size={24} />
           ),
         }}
       />
@@ -37,7 +37,7 @@ export function TabNavigation() {
       <Tab.Screen name='Camera' component={ScreenCamera}
       options={{
         tabBarIcon: () => (
-          <AntDesign name = 'camera' color={colors.white} size={24} />
+          <AntDesign name = 'camera' color={colors.black} size={24} />
         ),
       }}
       />
