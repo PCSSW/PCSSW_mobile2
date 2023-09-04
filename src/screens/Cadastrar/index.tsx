@@ -26,7 +26,7 @@ export function Cadastrar({ navigation }: LoginTypes) {
             setIsLoading(true)
             if (data?.name && data.email && data.password) {
                 const response = await apiUser.register(data)
-                Alert.alert('$(response.data.name) cadastrado com sucesso!')
+                Alert.alert(`$(response.data.name) cadastrado com sucesso!`)
                 navigation.navigate('Login')
             } else {
                 Alert.alert("Preencha todos os campos!")
