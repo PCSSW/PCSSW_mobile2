@@ -4,7 +4,7 @@ import { styles } from "./styles";
 import { MaterialIcons, FontAwesome5 } from '@expo/vector-icons';
 import { colors } from '../../styles/colors';
 import { ComponentButtonInterface, ComponentLoading } from '../../components';
-import { LoginTypes } from '../../navigations/login.navigations';
+import { LoginTypes } from '../../navigations/login.navigation';
 import { IRegister } from '../../services/data/User';
 import { apiUser } from '../../services/data';
 import { AxiosError } from 'axios';
