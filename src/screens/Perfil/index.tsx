@@ -1,18 +1,53 @@
-import { View, Text} from "react-native"
-import { ComponentButtonInterface } from "../../components"
-import { styles } from "./styles"
+import { View, Text } from "react-native";
+import { styles } from "./styles";
+import { TouchableOpacity } from "react-native-gesture-handler";
 import { TabTypes } from "../../navigations/tab.navigation";
+import * as Notifications from "expo-notifications";
+import { registerForPushNotificationsAsync } from "../../services/data/Push";
+import { useAuth } from "../../hooks/auth";
+import { useEffect, useState } from "react";
+import { ComponentLoading, ComponentButtonInterface } from "../../components";
 
-export function Perfil({ navigation }:TabTypes) {
-    function handleVoltar(){
-        const tab = navigation.getParent()
-        tab?.goBack()
+Notifications.setNotificationHandler({
+    handleNotification: async () => ({
+      shouldShowAlert: true,
+      shouldPlaySound: false,
+      shouldSetBadge: false,
+    }),
+  });
+
+  export function Perfil({ navigation }: TabTypes) {
+    const { user, signOut } = useAuth();
+    const [isLoading, setIsLoading] = useState(true);
+    async function handleVoltar() {
+      console.log("oi")
+      await signOut();
     }
-    return(
-        <View style={styles.container}>
-            <Text>Perfil</Text>
-            <ComponentButtonInterface title='Voltar' type='primary' onPressI={handleVoltar}></ComponentButtonInterface>
-        </View>
+    useEffect(() => {
+      if (user) {
+        setIsLoading(false);
+      }
+    }, [user]);
+    useEffect(() => {
+      async function fetchToken() {
+        const token = await registerForPushNotificationsAsync();
+        console.log(token);
+      }
+      fetchToken();
+    }, []);
+    return (
+        <>
+          {isLoading ? (
+            <ComponentLoading />
+          ) : (
+            <View style={styles.container}>
+              <Text>Perfil</Text>
+              <ComponentButtonInterface onPressI={handleVoltar} title="Voltar" type="primary">
+                <Text>Voltar</Text>
+              </ComponentButtonInterface>
+            </View>
+          )}
+        </>
+      )
             
-    )
 }
