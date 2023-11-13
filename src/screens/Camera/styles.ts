@@ -32,7 +32,7 @@ export const styles = StyleSheet.create({
     },
     sorriso: {
       flex: 1,
-      alignItems: 'flex-end',
+      alignItems: 'center',
       justifyContent: 'flex-end'
     }
   });

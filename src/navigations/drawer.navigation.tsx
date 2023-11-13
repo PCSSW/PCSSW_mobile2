@@ -1,6 +1,6 @@
 import React from 'react';
 import { DrawerNavigationProp, createDrawerNavigator } from '@react-navigation/drawer';
-import { ScreenCamera, ScreenPerfil } from "../screens"
+import { ScreenCamera, ScreenPerfil, ScreenCarro } from "../screens"
 import { colors } from '../styles/colors';
 import { Ionicons, AntDesign } from '@expo/vector-icons';
 type DrawerParamList = {
@@ -28,6 +28,13 @@ export function DrawerNavigation() {
           drawerIcon: () => (
             <AntDesign name='camera' size={24} color={colors.black} />
           )
+        }}
+      />
+      <Drawer.Screen name = "Acelerometro" component={ScreenCarro} 
+        options={{
+          drawerIcon: () => (
+            <AntDesign name="car" size={24} color="black" />
+          ),
         }}
       />
     </Drawer.Navigator>
